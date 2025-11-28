@@ -1,0 +1,38 @@
+/* General Reset and Body Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Hide scrollbars, as the rings might slightly move off-screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212; /* Dark background for contrast */
+    font-family: sans-serif;
+}
+
+/* Ring Container Setup */
+#ring-container {
+    --ring-size: 400px; /* Size of the largest ring */
+    --num-rings: 10;
+    position: relative;
+    width: var(--ring-size);
+    height: var(--ring-size);
+    /* Perspective is key for the 3D-like floating effect */
+    perspective: 1000px; 
+}
+
+/* Individual Ring Styling */
+.ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the rings */
+    border-radius: 50%; /* Make them circular */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    
+    /* **UPDATED:** Use a smoother transition for a liquid "flow" and "cohesion" effect */
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* The JavaScript will set the width, height, and background color for each ring */

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harika Jakka - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="ring-container"></div>
+    <nav>
+        <div class="nav-container">
+            <div class="logo"></div>
+            <ul class="nav-links">
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="slides">
+                    <div id="first-slide" class="slide" data-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAyAAAAGQCAMAAABh+/QGAAAC9FBMVEXu7u7u7u7////5+fn////u7u78/Pz7+/v////////////5+fn////////////7+/v////////////39/f////6+vr+/v76+vr////////39/f////v7+/9/f3v7+/////////+/v74+Pj////////////////////8/Pz5+fn////////////w8PD+/v7z8/P////7+/v////////9/f3u7u7////////4+Pj////////////////////////////////////u7u7////6+vr////09PT////////////////////////////////4+Pj////////y8vL////////////////////////v7+/////////////09PTu7u79/f3////////39/f////////////////////////////////////////////8/Pz////29vb////////z8/P////////////////x8fH////////////////////////z8/P////z8/P////////////////////////////////////19fX////v7+/x8fH////////////////////39/f////////w8PD////////x8fHz8/P////////////z8/P19fX////19fX////////////y8vL////29vb////x8fH////29vb////////////////////////////////v7+/////////////////x8fH////////19fX19fX////////x8fHw8PD09PT29vb////////w8PD////////y8vLw8PDw8PDy8vL09PTv7+/////////////////////////////////////////////////////////////////4+Pj////v7+/////y8vL///////////////8AAADu7u7u7u7v7+/y8vL19fXz8/P29vb5+fn4+Pj09PT39/f6+vr9/f37+/v8/Pz+/v7v7+////8Ohw90AAAA6nRSTlP+/VG3EfiorVyeTbVdYkysPhdSvl+yobNjU8Fg9qf3NWGjuzuEG0kSq7YfHVjuotZtrpwypftBIryRXlcWnXaNm5P5g7CQ0RpkixNFlHs9vXpW3UoUfk98dPRO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">
+                    </div>
+                </div>
+                <canvas class="draw"></canvas>
+                <h1>Harika Jakka</h1>
+                <p class="hero-description">Motivated Computer Science student with experience in software development and emerging technologies. Passionate about innovative solutions and learning new frameworks.</p>
+            </div>
+            <div class="hero-contact">
+                <h3>Let's Collaborate</h3>
+                <div class="social-cards">
+                    <a class="glassIco" href="tel:+916304448289" title="Contact"><i class="fas fa-phone"></i></a>
+                    <a class="glassIco" href="mailto:jakkaharika4@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a class="glassIco" href="#" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="glassIco" href="#" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Programming</h3>
+                    <div class="skill-stack">
+                        <span class="skill-badge"><i class="fab fa-java"></i> Java</span>
+                        <span class="skill-badge"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-badge"><i class="fas fa-code"></i> C</span>
+                        <span class="skill-badge"><i class="fab fa-js-square"></i> JavaScript</span>
+                        <span class="skill-badge"><i class="fas fa-database"></i> SQL</span>
+                        <span class="skill-badge"><i class="fab fa-html5"></i> HTML/CSS</span>
+                        <span class="skill-badge"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>Backend</h3>
+                    <div class="skill-stack">
+                        <span class="skill-badge"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="skill-badge"><i class="fas fa-server"></i> Express.js</span>
+                        <span class="skill-badge"><i class="fas fa-flask"></i> Flask</span>
+                        <span class="skill-badge"><i class="fas fa-database"></i> MongoDB</span>
+                        <span class="skill-badge"><i class="fas fa-database"></i> PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>AI & ML</h3>
+                    <div class="skill-stack">
+                        <span class="skill-badge"><i class="fas fa-eye"></i> OpenCV</span>
+                        <span class="skill-badge"><i class="fas fa-video"></i> MediaPipe</span>
+                        <span class="skill-badge"><i class="fas fa-atom"></i> Quantum</span>
+                        <span class="skill-badge"><i class="fas fa-brain"></i> Scikit-learn</span>
+                        <span class="skill-badge"><i class="fas fa-robot"></i> Machine Learning</span>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <h3>Tools</h3>
+                    <div class="skill-stack">
+                        <span class="skill-badge"><i class="fab fa-git"></i> Git</span>
+                        <span class="skill-badge"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="skill-badge"><i class="fab fa-windows"></i> Visual Studio</span>
+                        <span class="skill-badge"><i class="fas fa-sitemap"></i> Data Structures</span>
+                        <span class="skill-badge"><i class="fas fa-cubes"></i> OOP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>Software Developer Trainee Intern</h3>
+                <p class="company">AeroByte Innovations Pvt. Ltd., Hyderabad</p>
+                <p class="duration">December 2024 – January 2025</p>
+                <ul>
+                    <li>Completed intensive 4-week internship focused on software development, debugging, and optimization of internal tools</li>
+                    <li>Participated in Agile sprints, code reviews, and collaborative problem-solving sessions covering the full project lifecycle</li>
+                    <li>Applied development best practices to troubleshoot technical challenges and work with diverse technology stacks</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Smart Car Pooling</h3>
+                    <p>Built a full-stack ride-sharing platform connecting drivers and passengers with real-time booking capabilities. Implemented secure authentication, optimized database queries, and designed responsive UI for cross-device compatibility.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="tech-badge"><i class="fas fa-server"></i> Express.js</span>
+                        <span class="tech-badge"><i class="fas fa-database"></i> MongoDB</span>
+                        <span class="tech-badge"><i class="fab fa-bootstrap"></i> Bootstrap</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>AI Proctoring System</h3>
+                    <p>Developed AI-powered proctoring tool with real-time anomaly detection for online examinations. Implemented computer vision pipelines using OpenCV and MediaPipe to monitor and flag suspicious behavior.</p>
+                    <div class="tech-stack">
+                        <span class="tech-badge"><i class="fab fa-python"></i> Python</span>
+                        <span class="tech-badge"><i class="fas fa-flask"></i> Flask</span>
+                        <span class="tech-badge"><i class="fas fa-eye"></i> OpenCV</span>
+                        <span class="tech-badge"><i class="fas fa-video"></i> MediaPipe</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <h3>Dual Degree Program</h3>
+                    <p><strong>B.Tech + M.Tech in Computer Science</strong></p>
+                    <p>Jawaharlal Nehru Technological University</p>
+                    <p>Hyderabad · CGPA 8.10</p>
+                    <p class="date">2021 – 2026</p>
+                    <p style="margin-top: 25px; font-size: 13px; color: #999;">Data Structures · Algorithms · Computer Networks · Database Systems · Operating Systems</p>
+                </div>
+                <div class="education-card">
+                    <h3>Intermediate MPC</h3>
+                    <p>Sri Gayathri Junior College</p>
+                    <p>98.1%</p>
+                    <p class="date">2018 – 2020</p>
+                </div>
+                <div class="education-card">
+                    <h3>Secondary School</h3>
+                    <p>Telangana Model High School</p>
+                    <p>9.0 CGPA</p>
+                    <p class="date">2018</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications">
+        <div class="container">
+            <h2>Certifications</h2>
+            <div class="cert-grid">
+                <div class="cert-item"><img src="https://th.bing.com/th?q=Google+Developer+Dashboard+Icon+Logo&w=120&h=120&c=1&rs=1&qlt=70&o=7&cb=1&dpr=2&pid=InlineBlock&rm=3&mkt=sv-SE&cc=SE&setlang=en&adlt=moderate&t=1&mw=247" alt="Google Developers" style="width: 50px; height: auto; margin-right: 10px;"> Machine Learning - Google for Developers - 2024</div>
+                <div class="cert-item"><img src="https://th.bing.com/th/id/OIP.U12vd2MyC9tSd62y8gytTQHaHa?w=171&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3" alt="Deep Learning.AI" style="width: 50px; height: auto; margin-right: 10px;"> Prompt Engineering - Deep Learning.AI - 2024</div>
+                <div class="cert-item"><img src="https://d1vwxdpzbgdqj.cloudfront.net/s3-public-images/learning-partners/greatlearning-brand.svg" alt="Great Learning" style="width: 50px; height: auto; margin-right: 10px;"> Java Programming - Great Learning - 2024</div>
+                <div class="cert-item"><img src="https://www.geekster.in/Logo.svg" alt="Geekster" style="width: 50px; height: auto; margin-right: 10px;"> SQL Certification - Geekster - 2024</div>
+                <div class="cert-item"><img src="https://dsel.education.gov.in/sites/default/files/emblem_updated.png" alt="NMMS" style="width: 50px; height: auto; margin-right: 10px;"> NMMS Scholarship - 5 Years - Recipient</div>
+                <div class="cert-item"><img src="https://dcx0p3on5z8dw.cloudfront.net/themes/classroom/logo.svg" alt="Aakash Institute" style="width: 50px; height: auto; margin-right: 10px;"> Best Student Award - Aakash Institute - 2021</div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Harika Jakka</p>
+        <p>All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
